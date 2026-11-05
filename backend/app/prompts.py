@@ -128,10 +128,8 @@ Return JSON:
 }"""
 
 CAPABILITIES_REPLY = (
-    "Hi! I'm your Voice of Customer analyst. I query unified customer feedback from product "
-    "reviews (RATINGS_REVIEWS), support chatbot transcripts (HML) and in-store field observations "
-    "(WOTS) across Microsoft, Apple, Dell, Lenovo, HP, ASUS and Samsung. Ask me about pain "
-    "points, sentiment by product, retailer or country, feature perception (like Copilot) or "
-    "trends over time, and I'll return an executive summary, KPI, data table, chart, real "
-    "customer quotes, channel mix and recommended actions."
+    "Hi! I'm your Voice of Customer analyst. I analyse customer reviews, support chats and "
+    "in-store feedback. Ask me about complaints, sentiment by product or retailer, features like "
+    "Copilot, or trends over time, and I'll show you a summary, charts, real customer quotes and "
+    "recommended actions."
 )
