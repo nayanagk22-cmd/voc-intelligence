@@ -2,7 +2,12 @@
 
 A fully containerised, full-stack AI application that answers natural-language questions about multi-channel customer feedback (Ratings & Reviews, support chatbot transcripts, in-store field observations). An OpenAI-powered agentic workflow plans the analysis, writes and safety-checks SQL, repairs it when it fails, pulls authentic customer quotes and channel mix in parallel, and returns an executive-ready answer rendered as structured UI components.
 
+**Demo video:** [Watch the demo (Google Drive)](https://drive.google.com/file/d/1pU65usFgSBT1zugFCFDRCZH-sjfJ211z/view?usp=sharing): Docker startup, the conversational fast path and two analytical benchmark queries.
+
+> The demo was recorded using Google Gemini via its OpenAI-compatible API because of OpenAI billing on the author's account. The code uses OpenAI models (`gpt-4o-mini`) as specified and only needs `OPENAI_API_KEY`.
+
 ```bash
+git clone https://github.com/nayanagk22-cmd/voc-intelligence.git && cd voc-intelligence
 cp .env.example .env        # add your OPENAI_API_KEY
 docker compose up --build   # open http://localhost:3000
 ```
@@ -15,7 +20,7 @@ docker compose up --build   # open http://localhost:3000
 
 1. Copy the environment template and fill in `OPENAI_API_KEY`:
    ```bash
-   cp .env.example .env
+   cp .env.example .env          # Windows CMD: copy .env.example .env
    ```
 2. Place the dataset in `./data/`. The app seeds `enriched_unified_data.xlsx` by default and also accepts a `.csv` with the same columns; if the configured file is absent it uses the first `.xlsx`/`.csv` it finds in `./data/`. (The repo ships the provided sample as `data/enriched_unified_data.csv`.)
 3. Start everything:
